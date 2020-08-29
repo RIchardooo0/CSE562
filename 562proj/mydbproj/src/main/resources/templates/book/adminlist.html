@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--bootstrape-->
+
+
+</head>
+<body class="container">
+    <h1>book list</h1>
+    <br/>
+    <div class="width:80%">
+        <table>
+            <thead>
+            <tr>
+                <th>book_id</th>
+                <th>book_name</th>
+                <th>author</th>
+                <th>classification_id</th>
+                <th>status</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="book:${books}">
+                <td th:text="${book.book_id}">123</td>
+                <td th:text="${book.book_name}">Wayne</td>
+                <td th:text="${book.author}">120</td>
+                <td th:text="${book.classification_id}">2018/8/31</td>
+                <td th:text="${book.book_status}">2018/8/31</td>
+                <td><a th:href="@{/toEdit(id=${book.book_id},cla_id=${book.classification_id})}">edit</a></td>
+                <td><a th:href="@{/toDelete(id=${book.book_id})}">delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <div>
+            <a th:href="@{/toAddBook}" class="button">add book</a>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <a th:href="@{/Adminborrowlist}" class="button">go to borrow list</a>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <a th:href="@{/AdminReturnList}" class="button">go to return list</a>
+        </div>
+    </div>
+
+    <div>
+        <div>
+    <a th:href="@{/}">logout</a>
+    </div>
+    </div>
+
+
+
+
+</body>
+</html>

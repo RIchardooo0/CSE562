@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>search result</title>
+</head>
+<body class="container">
+<h1>search result</h1>
+<br/>
+
+<div class="width:80%">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <!--<th>ID</th>-->
+            <th>book name</th>
+            <th>author</th>
+            <th>classification</th>
+            <th>status</th>
+            <th>Manipulate</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book:${books}">
+            <!--<td th:text="${book.book_id}">123</td>-->
+            <td th:text="${book.book_name}">Wayne</td>
+            <td th:text="${book.author}">120</td>
+            <td th:text="${book.classification_id}">2018/8/31</td>
+            <td th:text="${book.book_status}">2018/8/31</td>
+            <td><a th:href="@{/toBorrow(id=${book.book_id})}">borrow</a></td>
+            <!--<td><a th:href="@{/toDelete(id=${book.book_id})}">删除</a></td>-->
+
+        </tr>
+        </br>
+        <a th:href="@{/studentfirst}">back</a>
+        </br>
+        <a th:href="@{/StuReturnList}">view my return list</a>
+        </br>
+        <a th:href="@{/Studentborrowlist}">view my borrow list</a>
+        </br>
+        <a th:href="@{/}">logout</a>
+        </br>
+        </tbody>
+
+
+    </table>
+
+
+</div>
+
+
+</body>
+</html>

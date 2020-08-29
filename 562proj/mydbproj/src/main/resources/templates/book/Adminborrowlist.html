@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--bootstrape-->
+
+
+</head>
+<body class="container">
+<h1>admin borrow list</h1>
+<br/>
+<div class="width:80%">
+    <table>
+        <thead>
+        <tr>
+            <th>book_name</th>
+            <th>student_name</th>
+            <th>is returned</th>
+            <th>borrow time</th>
+            <th>delete</th>
+            <th>return</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="borrowList1:${adminBorrowList}">
+            <td th:text="${borrowList1.getBook_name()}">123</td>
+            <td th:text="${borrowList1.getStu_name()}">Wayne</td>
+            <td th:text="${borrowList1.getIsReturned()}">120</td>
+            <td th:text="${borrowList1.getBorrow_time()}">2018/8/31</td>
+            <!--<td><a th:href="@{/toAdminlistEdit(borrowing_id=${borrowList.getBorrow_id()},borrowing_time=${borrowList.getBorrowing_time()})}">编辑</a></td>-->
+            <td><a th:href="@{/toAdminlistDelete(id=${borrowList1.getBorrow_id()})}">delete</a></td>
+            <td><a th:href="@{/toAdminReturn(borrow_Id=${borrowList1.getBorrow_id()},book_Id=${borrowList1.getBook_id()},student_Id=${borrowList1.getStudent_id()})}">returned</a></td>
+        </tr>
+        </tbody>
+        <a th:href="@{/adminlist}">back to book list</a>
+    </table>
+</div>
+
+</body>
+</html>

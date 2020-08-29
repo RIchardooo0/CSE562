@@ -1,0 +1,20 @@
+{"book_name":"Java","author":"Bill Gates","book_status":"available","classification": "Computer Science"}
+{"book_name":"PHP","author":"Michael Jackson","book_status":"available","classification": "Computer Science"}
+{"book_name":"Python","author":"Bill Gates","book_status":"available","classification": "Computer Science"}
+{"book_name":"Database","author":"Bill Gates","book_status":"available","classification": "Computer Science"}
+{"book_name":"C++","author":"Bill Gates","book_status":"available","classification": "Computer Science"}
+{"book_name":"C","author":"Bill Gates","book_status":"available","classification": "Computer Science"}
+{"book_name":"C#","author":"Bill Gates","book_status":"available","classification": "Computer Science"}
+{"book_name":"Deep Learning","author":"Bill Gates","book_status":"available","classification": "Computer Science"}
+{"book_name":"Dynamics","author":"Bloomberg","book_status":"available","classification": "Physics"}
+{"book_name":"Fluid Dynamics","author":"Bloomberg","book_status":"available","classification": "Physics"}
+{"book_name":"Introduction to Physics","author":"Bloomberg","book_status":"available","classification": "Physics"}
+{"book_name":"Introduction to Maths","author":"Gaussian","book_status":"available","classification": "Maths"}
+{"book_name":"Calculus","author":"Gaussian","book_status":"available","classification": "Maths"}
+{"book_name":"Linear Algebra","author":"Gaussian","book_status":"available","classification": "Maths"}
+{"book_name":"Differential Equation","author":"Gaussian","book_status":"available","classification": "Maths"}
+{"book_name":"Jane Eyre","author":"Charlotte Bronte","book_status":"available","classification": "Literature"}
+{"book_name":"The Hunchback of Notre-Dame","author":"Victor Hugo","book_status":"available","classification": "Literature"}
+{"book_name":"Les Miserables","author":"Victor Hugo","book_status":"available","classification": "Literature"}
+{"book_name":"The Old Man and the Sea","author":"Hemiingway","book_status":"available","classification": "Literature"}
+{"book_name":"The Art of War","author":"Sun Tzu","book_status":"available","classification": "Literature"}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--bootstrape-->
+
+
+</head>
+<body class="container">
+<h1>my borrow list</h1>
+<br/>
+<div class="width:80%">
+    <table>
+        <thead>
+        <tr>
+            <th>book name</th>
+            <th>student name</th>
+            <th>is returned</th>
+            <th>borrowing time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="borrowList1:${stuBorrowList}">
+            <td th:text="${borrowList1.getBook_name()}">123</td>
+            <td th:text="${borrowList1.getStu_name()}">Wayne</td>
+            <td th:text="${borrowList1.getIsReturned()}">120</td>
+            <td th:text="${borrowList1.getBorrow_time()}">2018/8/31</td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/studentBook}">back to book list</a>
+</div>
+</body>
+</html>

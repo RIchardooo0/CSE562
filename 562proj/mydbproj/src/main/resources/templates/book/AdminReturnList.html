@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--bootstrape-->
+
+
+</head>
+<body class="container">
+<h1>studentReturnList</h1>
+<br/>
+<div class="width:80%">
+    <table>
+        <thead>
+        <tr>
+            <th>book name</th>
+            <th>student name</th>
+            <th>return time</th>
+            <!--<th>Edit</th>-->
+            <th>Delete</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="returnList1:${adminReturnList}">
+            <td th:text="${returnList1.getBook_name()}">123</td>
+            <td th:text="${returnList1.getStu_name()}">Wayne</td>
+            <td th:text="${returnList1.getReturn_time()}">120</td>
+            <!--<td><a th:href="@{/toAdminlistEdit(borrowing_id=${borrowList.getBorrow_id()},borrowing_time=${borrowList.getBorrowing_time()})}">编辑</a></td>-->
+            <td><a th:href="@{/toDeleteReturn(id=${returnList1.getReturn_id()})}">delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/adminlist}">back to book list</a>
+</div>
+
+
+</body>
+</html>

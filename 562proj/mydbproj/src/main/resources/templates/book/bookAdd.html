@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add book</title>
+
+</head>
+<body>
+
+<h1>Add book</h1>
+<br/>
+
+<form th:action="@{/addBook}" method="post">
+    <div>
+        <label>bookname</label>
+        <div>
+            <input type="text" name="bookName" id="bookName" placeholder="bookname">
+        </div>
+    </div>
+    <div>
+        <label>author</label>
+        <div>
+            <input type="text" name="author" id="author" placeholder="author">
+        </div>
+    </div>
+    <div>
+        <label>classification</label>
+        <div>
+            <input type="text" name="classification" id="classification" placeholder="classification">
+        </div>
+    </div>
+    <div>
+        <label>status</label>
+        <div>
+            <input type="radio" id="choice1" name="status" value="available">
+            <label for="choice1"> available</label><br>
+            <input type="radio" id="choice2" name="status" value="borrowed">
+            <label for="choice2"> borrowed</label><br>
+        </div>
+    </div>
+
+
+
+    <div>
+        <div>
+            <input type="submit" value="add" class="button">
+            <input type="reset" value="reset" class="button">
+            <a th:href="@{/adminlist}">back</a>
+        </div>
+    </div>
+
+
+</form>
+
+</body>
+</html>
